@@ -1,0 +1,25 @@
+version: '3'
+services:
+  apache:
+    container_name: srv-moodle-apache
+    image:  jorarmarfin/moodle:3.7
+    volumes:
+      - ./apache/www:/var/www
+      - ./apache/backup:/backup
+    ports:
+      - 9005:80
+    networks:
+      - net_moodle
+  db:
+    container_name: srv-moodle-mysql
+    image:  jorarmarfin/mysql:5.7-moodle37
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+      - ./mysql/backup:/backup
+    networks:
+      - net_moodle
+networks:
+  net_moodle:
