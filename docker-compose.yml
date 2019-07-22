@@ -1,18 +1,18 @@
 version: '3'
 services:
   apache:
-    container_name: srv-moodle-apache
-    image:  jorarmarfin/moodle:3.7
+    container_name: srv-drupal-apache
+    image:  jorarmarfin/drupal:tmp
     volumes:
       - ./apache/www:/var/www
       - ./apache/backup:/backup
     ports:
       - 9005:80
     networks:
-      - net_moodle
+      - net_drupal
   db:
-    container_name: srv-moodle-mysql
-    image:  jorarmarfin/mysql:5.7-moodle37
+    container_name: srv-drupal-mysql
+    image:  mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
@@ -20,6 +20,6 @@ services:
       - ./mysql/conf:/etc/mysql/conf.d
       - ./mysql/backup:/backup
     networks:
-      - net_moodle
+      - net_drupal
 networks:
-  net_moodle:
+  net_drupal:

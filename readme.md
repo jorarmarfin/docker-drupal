@@ -8,4 +8,4 @@
 
 ## Credenciales
 * user: admin
-* pass: Moodle2019@
+* pass: Drupal2019@
