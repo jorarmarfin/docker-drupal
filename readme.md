@@ -9,3 +9,18 @@
 ## Credenciales
 * user: admin
 * pass: Drupal2019@
+
+## Optimizer mysql
+* ejecutar este comando en la carpeta config de su mysql
+* wget https://raw.githubusercontent.com/jorarmarfin/docker-mysql/master/myconfig.cnf
+
+## Modulos instalados
+* admin_toolbar
+* module_filter
+* pathauto
+* token
+* ctools
+* recaptcha
+* smtp
+* fontawesome
+* backup_migrate
