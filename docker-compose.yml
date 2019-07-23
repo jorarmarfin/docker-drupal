@@ -2,7 +2,7 @@ version: '3'
 services:
   apache:
     container_name: srv-drupal-apache
-    image:  jorarmarfin/drupal:tmp
+    image:  jorarmarfin/drupal:8.7.5
     volumes:
       - ./apache/www:/var/www
       - ./apache/backup:/backup
@@ -12,7 +12,7 @@ services:
       - net_drupal
   db:
     container_name: srv-drupal-mysql
-    image:  mysql:5.7
+    image:  jorarmarfin/mysql:5.7-drupal875
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
