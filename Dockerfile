@@ -7,5 +7,5 @@ ENV DB_PASS=root
 
 RUN apt-get install wget -y
 
-ADD drupal.tgz /root
+ADD drupal-8.7.5.tgz /root
 ADD drupal.sh /
