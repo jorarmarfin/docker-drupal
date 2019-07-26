@@ -25,6 +25,8 @@
 * fontawesome
 * backup_migrate
 * restui
+* mailsystem
+* mimemail
 
 ## Variables de entorno
 * DB_HOST=srv-drupal-mysql

@@ -14,3 +14,12 @@ cd /var/www
 drupal cr
 echo 'Drupal Desplegado'
 fi
+
+#cd /var/
+#cp -rf www drupal
+#tar -czvf drupal-8.7.5-v.tgz drupal
+#rm -rf drupal
+#mv drupal* /backup
+#cd /var/www/
+#drupal dbdu --gz
+#mv drupal* /backup
