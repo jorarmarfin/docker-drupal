@@ -5,7 +5,9 @@ ENV DB_DATABASE=drupal
 ENV DB_USER=root
 ENV DB_PASS=root
 
-RUN apt-get install wget -y
+RUN apt-get install wget -y; \
+echo "alias drush='/var/www/vendor/bin/drush'">>/root/.profile; \
+source /root/.profile
 
-ADD drupal-8.7.5-v2.tgz /root
+ADD drupal-* /root
 ADD drupal.sh /

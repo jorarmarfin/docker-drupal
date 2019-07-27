@@ -27,9 +27,17 @@
 * restui
 * mailsystem
 * mimemail
+* webform
 
 ## Variables de entorno
 * DB_HOST=srv-drupal-mysql
 * DB_DATABASE=drupal
 * DB_USER=root
 * DB_PASS=root
+
+## Configuraciones
+- Tiene carpeta de archivos privados instalado /site/default/private
+
+## comandos Drush
+* drush user-password USERNAME –password=”PASSWORD”
+* drush php-eval ‘db_query(“DELETE FROM `flood`”);’ Desbloquea intentos fallidos
