@@ -12,14 +12,10 @@ chown -Rf  www-data:www-data /var/www/*
 chmod 0775 -Rf /var/www/*
 cd /var/www
 drupal cr
+# Drush
+echo "alias drush='/var/www/vendor/bin/drush'">>/root/.profile;
+source /root/.profile
+
 echo 'Drupal Desplegado'
 fi
 
-#cd /var/
-#cp -rf www drupal
-#tar -czvf drupal-8.7.5-v.tgz drupal
-#rm -rf drupal
-#mv drupal* /backup
-#cd /var/www/
-#drupal dbdu --gz
-#mv drupal* /backup
