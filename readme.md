@@ -28,6 +28,8 @@
 * mailsystem
 * mimemail
 * webform
+* empty_page
+* link_attributes
 
 ## Variables de entorno
 * DB_HOST=srv-drupal-mysql
