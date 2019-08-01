@@ -1,6 +1,7 @@
 #!/bin/bash
 if [ $1 = 'init' ]; then
 cp -rf /root/drupal/* /var/www/
+rm -rf /root/drupal
 
 rm -rf /var/www/html
 ln -s /var/www/web /var/www/html
