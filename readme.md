@@ -34,7 +34,7 @@
 
 ## Variables de entorno
 * DB_HOST=srv-drupal-mysql
-* DB_DATABASE=drupal
+* DB_NAME=drupal
 * DB_USER=root
 * DB_PASS=root
 
