@@ -30,6 +30,7 @@
 * webform
 * empty_page
 * link_attributes
+* back_to_top
 
 ## Variables de entorno
 * DB_HOST=srv-drupal-mysql
@@ -43,3 +44,32 @@
 ## comandos Drush
 * drush user-password USERNAME –password=”PASSWORD”
 * drush php-eval ‘db_query(“DELETE FROM `flood`”);’ Desbloquea intentos fallidos
+
+## Docker-compose
+~~~~
+version: '3'
+services:
+  apache:
+    container_name: srv-drupal-apache
+    image:  jorarmarfin/drupal:8.7.5
+    volumes:
+      - ./apache/www:/var/www
+      - ./apache/backup:/backup
+    ports:
+      - 9005:80
+    networks:
+      - net_drupal
+  db:
+    container_name: srv-drupal-mysql
+    image:  jorarmarfin/mysql:5.7-drupal875
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+      - ./mysql/backup:/backup
+    networks:
+      - net_drupal
+networks:
+  net_drupal:
+~~~~
