@@ -42,7 +42,7 @@
 - Tiene carpeta de archivos privados instalado /site/default/private
 
 ## comandos Drush
-* drush user-password USERNAME –password=”PASSWORD”
+* drush upwd USERNAME PASSWORD
 * drush php-eval ‘db_query(“DELETE FROM `flood`”);’ Desbloquea intentos fallidos
 
 ## Docker-compose
